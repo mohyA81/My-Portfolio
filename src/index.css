@@ -9,4 +9,18 @@ body {
   background: #030007;
   color: white;
   font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+::selection {
+  background: rgba(168, 85, 247, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.03em;
 }
