@@ -101,7 +101,7 @@ function Contact() {
 
               {status === "success" && (
                 <p className="text-center text-green-400">
-                  Message sent successfully!
+                  Thank you! Your message has been sent successfully. I’ll get back to you within 24–48 hours.
                 </p>
               )}
 

@@ -8,3 +8,5 @@ export const profile = {
   email: "your-email@example.com",
   resume: "/resume.pdf",
 }
+'My Vision'
+'I want to build digital experiences that combine beautiful design, strong performance, and intelligent technology. My goal is to create products that are both useful and memorable.'
