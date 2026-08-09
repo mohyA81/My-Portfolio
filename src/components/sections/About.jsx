@@ -2,16 +2,20 @@ import SectionTitle from '../ui/SectionTitle'
 import Button from '../ui/Button'
 import Container from '../ui/Container'
 import { profile } from '../../data/profile'
+import ScrollReveal from '../common/ScrollReveal'
 
 function About() {
   return (
     <section id="about" className="px-6 py-24">
       <Container>
+        <ScrollReveal>
         <SectionTitle title="About Me" subtitle="Get to know me" />
-
+        </ScrollReveal>
+        
+        <ScrollReveal>
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
-            <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-purple-500/20 via-purple-800/10 to-transparent border border-purple-800/20 shadow-2xl shadow-purple-900/20">
+            <div className="border shadow-2xl aspect-4/5 rounded-3xl bg-linear-to-br from-purple-500/20 via-purple-800/10 to-transparent border-purple-800/20 shadow-purple-900/20">
               <span className="text-lg text-purple-300">Your Photo</span>
             </div>
           </div>
@@ -44,6 +48,7 @@ function About() {
             <Button href={profile.resume}>Download Resume</Button>
           </div>
         </div>
+        </ScrollReveal>
       </Container>
     </section>
   )

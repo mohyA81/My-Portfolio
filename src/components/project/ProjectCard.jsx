@@ -1,18 +1,24 @@
+import { motion } from "framer-motion";
+import { scaleIn } from "../../lib/animations";
+
 function ProjectCard({ project }) {
   return (
-    <div className="group rounded-3xl overflow-hidden border border-purple-900/20 bg-white/[0.03] backdrop-blur-sm hover:border-purple-500/40 hover:-translate-y-2 transition-all duration-500">
-      <div className="flex items-center justify-center h-60 bg-gradient-to-br from-purple-500/20 via-purple-700/10 to-transparent">
+    <motion.div
+      variants={scaleIn}
+      whileHover={{
+        y: -8,
+        transition: { duration: 0.25 },
+      }}
+      className="overflow-hidden transition-all duration-500 border group rounded-3xl border-purple-900/20 bg-white/3 backdrop-blur-sm hover:border-purple-500/40 hover:-translate-y-2"
+    >
+      <div className="flex items-center justify-center h-60 bg-linear-to-br from-purple-500/20 via-purple-700/10 to-transparent">
         <span className="text-purple-300">Project Image</span>
       </div>
 
       <div className="p-8">
-        <h3 className="mb-3 text-2xl font-semibold">
-          {project.title}
-        </h3>
+        <h3 className="mb-3 text-2xl font-semibold">{project.title}</h3>
 
-        <p className="mb-5 leading-7 text-gray-300">
-          {project.description}
-        </p>
+        <p className="mb-5 leading-7 text-gray-300">{project.description}</p>
 
         <div className="px-3 py-1.5 rounded-full bg-purple-500/10 text-purple-200 text-sm border border-purple-800/20">
           {project.technologies.map((tech) => (
@@ -45,8 +51,8 @@ function ProjectCard({ project }) {
           </a>
         </div>
       </div>
-    </div>
-  )
+    </motion.div>
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

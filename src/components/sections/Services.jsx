@@ -3,6 +3,7 @@ import Container from '../ui/Container'
 import SectionTitle from '../ui/SectionTitle'
 import { services } from '../../data/services'
 import PricingModal from '../pricing/PricingModal'
+import ScrollReveal from '../common/ScrollReveal'
 
 function Services() {
   const [activeService, setActiveService] = useState(null)
@@ -10,16 +11,19 @@ function Services() {
   return (
     <section id="services" className="py-28">
       <Container>
+        <ScrollReveal>
         <SectionTitle
           title="My Services"
           subtitle="What I can build for you"
         />
+        </ScrollReveal>
 
+        <ScrollReveal>
         <div className="grid gap-8 md:grid-cols-2">
           {services.map((service) => (
             <div
               key={service.id}
-              className="rounded-3xl border border-purple-900/20 bg-white/[0.03] backdrop-blur-sm p-8 hover:border-purple-500/40 transition-all duration-300"
+              className="p-8 transition-all duration-300 border rounded-3xl border-purple-900/20 bg-white/3 backdrop-blur-sm hover:border-purple-500/40"
             >
               <h3 className="mb-4 text-2xl font-bold">
                 {service.title}
@@ -55,6 +59,7 @@ function Services() {
           service={activeService}
           onClose={() => setActiveService(null)}
         />
+        </ScrollReveal>
       </Container>
     </section>
   )

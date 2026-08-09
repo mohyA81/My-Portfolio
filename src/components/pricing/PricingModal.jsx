@@ -21,7 +21,7 @@ function PricingModal({ service, onClose }) {
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3 }}
           onClick={(e) => e.stopPropagation()}
-          className="w-full max-w-5xl rounded-[32px] border border-white/10 bg-white/10 backdrop-blur-2xl shadow-2xl shadow-purple-900/30 p-8 md:p-10"
+          className="w-full max-w-5xl p-8 border shadow-2xl rounded-32px border-white/10 bg-white/10 backdrop-blur-2xl shadow-purple-900/30 md:p-10"
         >
           <div className="flex items-center justify-between mb-10">
             <div>
