@@ -1,95 +1,179 @@
-import { motion } from 'framer-motion'
-import Button from '../ui/Button'
-import Container from '../ui/Container'
-import { fadeUp, staggerContainer } from '../../lib/animations'
+import { motion } from "framer-motion";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+
+const socialLinks = [
+  {
+    label: "GitHub",
+    href: "https://github.com/mohyA81",
+  },
+  {
+    label: "LinkedIn",
+    href: " https://www.linkedin.com/in/mohadese-khanloo/",
+  },
+  {
+    label: "Email",
+    href: "mailto:mohy.atlookhanloo@gmail.com",
+  },
+];
 
 function Hero() {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+
+    if (!aboutSection) return;
+
+    const navbarOffset = 90;
+    const sectionPosition =
+      aboutSection.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: sectionPosition - navbarOffset,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center min-h-screen pt-20 overflow-hidden"
+      className="relative flex items-center min-h-screen px-6 pt-24 overflow-hidden"
     >
-      {/* Background glow */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-150 h-150 bg-purple-500/15 rounded-full blur-[120px]" />
-        <div className="absolute bottom-10 right-10 w-64 h-64 bg-purple-400/10 rounded-full blur-[80px]" />
-      </div>
+      {/* Background Glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/4 -z-10 h-80 w-80 -translate-x-1/2 rounded-full bg-violet-500/20 blur-[120px]"
+      />
 
-      <Container>
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
-          className="max-w-5xl mx-auto text-center"
-        >
-          <motion.p
-            variants={fadeUp}
-            className="text-purple-300 uppercase tracking-[0.35em] text-sm font-medium mb-6"
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-40 top-1/3 -z-10 h-96 w-96 rounded-full bg-purple-500/10 blur-[140px]"
+      />
+
+      <div className="w-full mx-auto max-w-7xl">
+        <div className="max-w-4xl">
+          {/* Small Intro */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-6"
           >
-            Software Engineer • React Developer
-          </motion.p>
+            <span className="inline-flex items-center gap-2 px-4 py-2 text-sm border rounded-full border-violet-400/20 bg-violet-500/10 text-violet-200 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-violet-400" />
+              Software Engineer
+            </span>
+          </motion.div>
 
+          {/* Main Heading */}
           <motion.h1
-            variants={fadeUp}
-            className="text-6xl md:text-8xl font-bold leading-[0.95] mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="text-balance text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-8xl"
           >
-            Mohadese
-            <br />
-            <span className="text-purple-300">(Tiara)</span>
+            Building
+            <span className="block text-transparent bg-linear-to-r from-violet-300 via-purple-400 to-fuchsia-400 bg-clip-text">
+              modern web
+            </span>
+            experiences.
           </motion.h1>
 
+          {/* Description */}
           <motion.p
-            variants={fadeUp}
-            className="max-w-3xl mx-auto mb-12 text-xl leading-9 text-gray-300 md:text-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mt-8 max-w-2xl text-base leading-7 text-(--text-muted) sm:text-lg"
           >
-            I build elegant web experiences with React and modern frontend
-            technologies, while exploring AI, machine learning, and digital
-            products that solve real-world problems.
+            I’m Tiara, a Software Engineer focused on building clean, responsive
+            and user-friendly websites while exploring AI and intelligent
+            systems.
           </motion.p>
 
+          {/* CTA Buttons */}
           <motion.div
-            variants={fadeUp}
-            className="flex flex-col items-center justify-center gap-4 sm:flex-row mb-14"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="flex flex-col gap-4 mt-10 sm:flex-row"
           >
-            <Button href="#projects">View Projects</Button>
-            <Button href="#contact" variant="secondary">
-              Let's Work Together
-            </Button>
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById("contact");
+
+                if (!contactSection) return;
+
+                const navbarOffset = 90;
+                const sectionPosition =
+                  contactSection.getBoundingClientRect().top + window.scrollY;
+
+                window.scrollTo({
+                  top: sectionPosition - navbarOffset,
+                  behavior: "smooth",
+                });
+              }}
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-violet-500 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-violet-400 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]"
+            >
+              Let’s Work Together
+              <ArrowUpRight
+                size={17}
+                className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </button>
+
+            <button
+              onClick={scrollToAbout}
+              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-medium text-white/80 backdrop-blur-sm transition-all duration-300 hover:border-violet-400/30 hover:bg-white/10 hover:text-white"
+            >
+              More About Me
+            </button>
           </motion.div>
 
+          {/* Social Links */}
           <motion.div
-            variants={fadeUp}
-            className="flex items-center justify-center gap-8 text-sm text-gray-400"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-wrap items-center gap-3 mt-12"
           >
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors duration-300 hover:text-purple-300"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors duration-300 hover:text-purple-300"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              href="mailto:your-email@example.com"
-              className="transition-colors duration-300 hover:text-purple-300"
-            >
-              Email
-            </a>
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target={social.label === "Email" ? undefined : "_blank"}
+                rel={social.label === "Email" ? undefined : "noreferrer"}
+                className="px-4 py-2 text-xs font-medium transition-all duration-300 border rounded-full border-white/10 bg-white/5 text-white/60 backdrop-blur-sm hover:border-violet-400/30 hover:bg-violet-500/10 hover:text-white"
+              >
+                {social.label}
+              </a>
+            ))}
           </motion.div>
-        </motion.div>
-      </Container>
+        </div>
+
+        {/* Scroll Indicator */}
+        <motion.button
+          onClick={scrollToAbout}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="absolute flex-col items-center hidden gap-3 transition-colors -translate-x-1/2 bottom-8 left-1/2 text-white/40 hover:text-white/70 sm:flex"
+          aria-label="Scroll to About section"
+        >
+          <span className="text-xs uppercase tracking-[0.3em]">Scroll</span>
+
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <ArrowDown size={18} />
+          </motion.div>
+        </motion.button>
+      </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

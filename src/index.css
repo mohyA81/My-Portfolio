@@ -1,4 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
+
+:root {
+  --background: #030007;
+  --surface: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.08);
+
+  --primary: #8b5cf6;
+  --primary-light: #a78bfa;
+  --primary-soft: #c4b5fd;
+
+  --text: #ffffff;
+  --text-muted: #b4b4c7;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -6,21 +24,87 @@ html {
 
 body {
   margin: 0;
-  background: #030007;
-  color: white;
   font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+  background: radial-gradient(
+      circle at top,
+      rgba(139, 92, 246, 0.12),
+      transparent 45%
+    ),
+    var(--background);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: rgba(168, 85, 247, 0.3);
+  background: rgba(139, 92, 246, 0.35);
+  color: white;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: -0.03em;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05010a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.35);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.55);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-inline: 2rem;
+  }
+}
+
+.section-padding {
+  padding-block: 7rem;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary-light),
+    var(--primary-soft)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow {
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.25);
 }

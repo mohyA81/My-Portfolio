@@ -1,59 +1,141 @@
-import SectionTitle from "../ui/SectionTitle";
-import Button from "../ui/Button";
+import { motion } from "framer-motion";
+import { Code2, Globe, Brain, Sparkles } from "lucide-react";
 import Container from "../ui/Container";
-import { profile } from "../../data/profile";
+import SectionTitle from "../ui/SectionTitle";
 import ScrollReveal from "../common/ScrollReveal";
 
 function About() {
   return (
-    <section id="about" className="px-6 py-24">
+    <section id="about" className="section-padding">
       <Container>
         <ScrollReveal>
-          <SectionTitle title="About Me" subtitle="Get to know me" />
-        </ScrollReveal>
+          <SectionTitle
+            title="About Me"
+            subtitle="A software engineer with a passion for design, technology, and meaningful digital experiences."
+          />
 
-        <ScrollReveal>
-          <div className="grid items-center gap-12 md:grid-cols-2">
-            <div>
-              <div className="border shadow-2xl aspect-4/5 rounded-3xl bg-linear-to-br from-purple-500/20 via-purple-800/10 to-transparent border-purple-800/20 shadow-purple-900/20">
-                <span className="text-lg text-purple-300">Your Photo</span>
+          <div className="grid items-center gap-16 lg:grid-cols-2">
+            {/* Left: Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="overflow-hidden aspect-4/5 rounded-4xl glass">
+                <img
+                  src="/images/profile.png"
+                  alt="Tiara portrait"
+                  className="object-cover w-full h-full"
+                />
               </div>
-            </div>
 
-            <div>
-              <h3 className="mb-6 text-3xl font-bold">{profile.title}</h3>
+              <div className="absolute w-40 h-40 rounded-full -bottom-6 -right-6 bg-purple-500/20 blur-3xl -z-10" />
+            </motion.div>
 
-              <p className="mb-8 leading-8 text-gray-300">{profile.bio}</p>
-
-              <div className="p-8 mt-10 mb-10 border m rounded-3xl border-purple-900/20 bg-white/5 backdrop-blur-sm">
-                <p className="text-purple-300 uppercase tracking-[0.25em] text-sm font-medium mb-4">
-                  My Vision
+            {/* Right: Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-8"
+            >
+              <div className="space-y-6 text-(--text-muted) leading-8 text-lg">
+                <p>
+                  I'm <span className="font-semibold text-white">Tiara</span>, a
+                  software engineer focused on frontend development with React,
+                  modern web technologies, and AI-powered applications. I enjoy
+                  building products that are both visually refined and
+                  technically well-crafted.
                 </p>
 
-                <p className="leading-8 text-gray-300">
-                  I believe great digital products should be both beautiful and
-                  useful. My goal is to build modern web experiences that
-                  combine clean design, strong performance, and intelligent
-                  technology. Whether I'm creating a portfolio website, a
-                  landing page, or an AI-powered project, I focus on delivering
-                  work that creates real value for people.
+                <p>
+                  My background in software engineering has given me a strong
+                  foundation in problem-solving, while my interest in design
+                  pushes me to create interfaces that feel intuitive,
+                  responsive, and memorable.
+                </p>
+
+                <p>
+                  I'm currently expanding my expertise in machine learning and
+                  intelligent systems, with a long-term goal of combining AI and
+                  web development to create impactful digital products.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-6 mb-10">
-                <div>
-                  <p className="mb-1 text-sm text-gray-400">Location</p>
-                  <p className="font-medium text-white">{profile.location}</p>
+              {/* Vision */}
+              <div className="p-8 glass rounded-3xl">
+                <div className="flex items-center gap-3 mb-5">
+                  <Sparkles className="text-purple-300" size={20} />
+                  <h3 className="text-2xl font-bold">My Vision</h3>
                 </div>
 
-                <div>
-                  <p className="mb-1 text-sm text-gray-400">Focus</p>
-                  <p className="font-medium text-white">Web & AI</p>
-                </div>
+                <p className="text-(--text-muted) leading-8">
+                  I believe technology should empower people, not complicate
+                  their lives. My goal is to create digital experiences that
+                  combine clean design, strong performance, accessibility, and
+                  intelligent functionality. Every project I build should be
+                  useful, beautiful, and meaningful.
+                </p>
               </div>
 
-              <Button href={profile.resume}>Download Resume</Button>
-            </div>
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-5">
+                {/* Projects */}
+                <div className="p-6 glass rounded-3xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Code2 className="text-purple-300" size={22} />
+
+                    <span className="text-sm text-(--text-muted)">
+                      Projects
+                    </span>
+                  </div>
+
+                  <p className="text-3xl font-bold">5+</p>
+                </div>
+
+                {/* AI & ML */}
+                <div className="p-6 glass rounded-3xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Brain className="text-purple-300" size={22} />
+
+                    <span className="text-sm text-(--text-muted)">
+                      AI & ML
+                    </span>
+                  </div>
+
+                  <p className="text-3xl font-bold">Growing</p>
+                </div>
+
+                {/* Clients */}
+                <div className="p-6 glass rounded-3xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Globe className="text-purple-300" size={22} />
+
+                    <span className="text-sm text-(--text-muted)">
+                      Clients
+                    </span>
+                  </div>
+
+                  <p className="text-3xl font-bold">Worldwide</p>
+                </div>
+
+                {/* Learning */}
+                <div className="p-6 glass rounded-3xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Sparkles className="text-purple-300" size={22} />
+
+                    <span className="text-sm text-(--text-muted)">
+                      Learning
+                    </span>
+                  </div>
+
+                  <p className="text-3xl font-bold">Every Day</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </ScrollReveal>
       </Container>
