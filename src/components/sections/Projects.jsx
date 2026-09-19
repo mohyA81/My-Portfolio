@@ -17,17 +17,7 @@ const projects = [
     githubUrl: "#",
   },
   {
-    title: "Heart Disease Prediction",
-    category: "Machine Learning",
-    description:
-      "A machine learning project that analyzes medical data and predicts the likelihood of heart disease using classification models.",
-    image: "/images/projects/portfolio2.PNG",
-    technologies: ["Python", "Pandas", "Scikit-learn"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Instagram Landing Page",
+    title: "Landing Page",
     category: "Web Design",
     description:
       "A modern landing page concept designed for businesses and personal brands looking to promote their services online.",

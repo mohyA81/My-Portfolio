@@ -24,7 +24,7 @@ const services = [
     packages: [
       {
         name: "Starter",
-        price: 120,
+        price: 200,
         description: "A simple and professional online presence.",
         features: [
           "1-page responsive website",
@@ -36,7 +36,7 @@ const services = [
       },
       {
         name: "Professional",
-        price: 200,
+        price: 350,
         featured: true,
         description: "A complete portfolio for professionals and freelancers.",
         features: [
@@ -50,7 +50,7 @@ const services = [
       },
       {
         name: "Premium",
-        price: 300,
+        price: 500,
         description: "A polished portfolio with a more advanced experience.",
         features: [
           "Everything in Professional",
@@ -80,7 +80,7 @@ const services = [
     packages: [
       {
         name: "Starter",
-        price: 80,
+        price: 100,
         description: "A clean landing page for a simple offer.",
         features: [
           "1-page landing page",
@@ -92,7 +92,7 @@ const services = [
       },
       {
         name: "Professional",
-        price: 140,
+        price: 150,
         featured: true,
         description: "A conversion-focused landing page for your brand.",
         features: [
@@ -135,10 +135,7 @@ function Services() {
 
   return (
     <>
-      <section
-        id="services"
-        className="px-6 py-24 sm:py-28 lg:py-32"
-      >
+      <section id="services" className="px-6 py-24 sm:py-28 lg:py-32">
         <Container>
           <ScrollReveal>
             <SectionTitle
