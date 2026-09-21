@@ -29,7 +29,7 @@ const skillGroups = [
     title: "Backend",
     description: "Creating practical and scalable web backends.",
     icon: Database,
-    skills: ["Python", "Django", "REST APIs"],
+    skills: ["Python", "C#", "ASP.NET", "REST APIs"],
   },
   {
     title: "AI & Data",
