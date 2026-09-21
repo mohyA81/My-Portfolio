@@ -120,7 +120,7 @@ function About() {
                   </div>
 
                   <p className="text-2xl sm:text-3xl font-bold break-words">
-                      Worldwide
+                      World wide
                   </p>
                 </div>
 
