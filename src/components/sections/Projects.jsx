@@ -11,7 +11,7 @@ const projects = [
     category: "Web Development",
     description:
       "A modern responsive portfolio website designed to showcase projects, skills, and services with a clean and engaging user experience.",
-    image: "/images/projects/portfolio.PNG",
+    image: "/images/projects/my-portfolio.PNG",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     liveUrl: "#",
     githubUrl: "#",
@@ -21,7 +21,7 @@ const projects = [
     category: "Web Design",
     description:
       "A modern landing page concept designed for businesses and personal brands looking to promote their services online.",
-    image: "/images/projects/portfolio3.PNG",
+    image: "/images/projects/landing page.PNG",
     technologies: ["HTML", "CSS", "JavaScript"],
     liveUrl: "#",
     githubUrl: "#",
