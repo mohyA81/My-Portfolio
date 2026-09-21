@@ -119,7 +119,9 @@ function About() {
                     </span>
                   </div>
 
-                  <p className="text-2xl sm:text-3xl font-bold break-words">Worldwide</p>
+                  <p className="text-2xl sm:text-3xl font-bold break-words">
+                      Worldwide
+                  </p>
                 </div>
 
                 {/* Learning */}
