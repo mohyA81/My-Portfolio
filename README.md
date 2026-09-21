@@ -1,16 +1,33 @@
-# React + Vite
+# Personal Portfolio 🌐
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio website, built to introduce myself, showcase my projects, and share my skills and experience.
 
-Currently, two official plugins are available:
+I designed and developed the website myself with a focus on keeping it simple, modern, responsive, and easy to navigate.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Built With
 
-## React Compiler
+* React
+* JavaScript
+* Tailwind CSS
+* Framer Motion
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📱 Features
 
-## Expanding the ESLint configuration
+* Responsive design
+* Modern and clean UI
+* Smooth animations
+* Project showcase
+* About and skills sections
+* Contact section
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 About the Project
+
+This project is also a way for me to practice and improve my frontend development skills while creating a place to showcase the work I've built.
+
+I'm continuously improving the website and adding new projects as I learn and grow.
+
+## 👩🏻‍💻 About Me
+
+I'm a Software Engineering graduate interested in software development, frontend development, and AI/ML.
+
+Thanks for visiting my portfolio!
