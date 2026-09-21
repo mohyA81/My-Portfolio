@@ -119,9 +119,8 @@ function About() {
                     </span>
                   </div>
 
-                  <p className="text-2xl sm:text-3xl font-bold">
-                      World wide
-                  </p>
+                  <p className="text-xl sm:text-3xl font-bold">Worldwide</p>
+
                 </div>
 
                 {/* Learning */}
@@ -134,7 +133,7 @@ function About() {
                     </span>
                   </div>
 
-                  <p className="text-2xl sm:text-3xl font-bold">Every Day</p>
+                  <p className="text-xl sm:text-3xl font-bold">Every Day</p>
                 </div>
               </div>
             </motion.div>
