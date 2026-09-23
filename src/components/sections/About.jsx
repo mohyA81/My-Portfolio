@@ -44,40 +44,22 @@ function About() {
             >
               <div className="space-y-6 text-(--text-muted) leading-8 text-lg">
                 <p>
-                  I'm <span className="font-semibold text-white">Tiara</span>, a
-                  software engineer focused on frontend development with React,
-                  modern web technologies, and AI-powered applications. I enjoy
-                  building products that are both visually refined and
-                  technically well-crafted.
+                  I'm <span className="font-semibold text-white">Tiara</span>, a Software Engineering graduate and Frontend Developer 
+                  focused on building modern, responsive, and user-friendly web experiences.
+                </p>
+                
+                <p>
+                  I started with software development and gradually became more interested in the frontend side of building 
+                  products. especially the part where code turns into something people can actually see and interact with.
                 </p>
 
                 <p>
-                  My background in software engineering has given me a strong
-                  foundation in problem-solving, while my interest in design
-                  pushes me to create interfaces that feel intuitive,
-                  responsive, and memorable.
+                  Alongside software development, I've been exploring Machine Learning and intelligent systems, 
+                  which is an area I plan to keep developing in the future.
                 </p>
 
                 <p>
-                  I'm currently expanding my expertise in machine learning and
-                  intelligent systems, with a long-term goal of combining AI and
-                  web development to create impactful digital products.
-                </p>
-              </div>
-
-              {/* Vision */}
-              <div className="p-8 glass rounded-3xl">
-                <div className="flex items-center gap-3 mb-5">
-                  <Sparkles className="text-purple-300" size={20} />
-                  <h3 className="text-2xl font-bold">My Vision</h3>
-                </div>
-
-                <p className="text-(--text-muted) leading-8">
-                  I believe technology should empower people, not complicate
-                  their lives. My goal is to create digital experiences that
-                  combine clean design, strong performance, accessibility, and
-                  intelligent functionality. Every project I build should be
-                  useful, beautiful, and meaningful.
+                Right now, I'm focused on building my experience through real projects and working with people who are building interesting things.
                 </p>
               </div>
 
@@ -93,7 +75,7 @@ function About() {
                     </span>
                   </div>
 
-                  <p className="text-3xl font-bold">5+</p>
+                  <p className="text-3xl font-bold">3+</p>
                 </div>
 
                 {/* AI & ML */}
