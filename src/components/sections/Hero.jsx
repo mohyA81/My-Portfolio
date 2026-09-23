@@ -56,15 +56,14 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-6"
-          >
+            >
             <span className="inline-flex items-center gap-2 px-4 py-2 text-sm border rounded-full border-violet-400/20 bg-violet-500/10 text-violet-200 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-violet-400" />
+            <span className="w-2 h-2 rounded-full bg-violet-400" />
               Frontend Developer
-              </span>
-              <span className="w-2 h-2 rounded-full bg-violet-400" />
+            <span className="w-1 h-1 rounded-full bg-violet-400/50" />
               Software Engineer
             </span>
-          </motion.div>
+            </motion.div>
 
           {/* Main Heading */}
           <motion.h1
