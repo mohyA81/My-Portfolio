@@ -8,7 +8,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: " https://www.linkedin.com/in/mohadese-khanloo/",
+    href: "https://www.linkedin.com/in/mohadese-khanloo/",
   },
   {
     label: "Email",
