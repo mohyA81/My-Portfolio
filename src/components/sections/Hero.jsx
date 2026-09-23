@@ -59,6 +59,9 @@ function Hero() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 text-sm border rounded-full border-violet-400/20 bg-violet-500/10 text-violet-200 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-violet-400" />
+              Frontend Developer
+              </span>
+              <span className="w-2 h-2 rounded-full bg-violet-400" />
               Software Engineer
             </span>
           </motion.div>
@@ -84,9 +87,8 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mt-8 max-w-2xl text-base leading-7 text-(--text-muted) sm:text-lg"
           >
-            I’m Tiara, a Software Engineer focused on building clean, responsive
-            and user-friendly websites while exploring AI and intelligent
-            systems.
+            I’m Tiara, a Software Engineering graduate focused on building clean, responsive, and user-friendly web experiences with React, JavaScript, and Tailwind CSS. 
+            I also have experience with C#, .NET, SQL, Python, and Machine Learning.
           </motion.p>
 
           {/* CTA Buttons */}
