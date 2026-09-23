@@ -30,7 +30,7 @@ const projects = [
     category: "Web Application",
     description:
       "A dashboard for managing customers, technicians, and work orders in a service management application.",
-    image: "/images/projects/workflow-dashboard.PNG",
+    image: "/images/projects/dashboard-page.PNG",
     technologies: ["C#", ".NET", "Entity Framework Core", "SQL Server"],
     githubUrl: "https://github.com/mohyA81/WorkFlow",
   },
