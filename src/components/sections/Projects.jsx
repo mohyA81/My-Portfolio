@@ -23,8 +23,16 @@ const projects = [
       "A modern landing page concept designed for businesses and personal brands looking to promote their services online.",
     image: "/images/projects/landing page.PNG",
     technologies: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/mohyA81/architect-portfolio-landing-page",
+  },
+    {
+    title: "Dashboard Page",
+    category: "Web Application",
+    description:
+      "A dashboard for managing customers, technicians, and work orders in a service management application.",
+    image: "/images/projects/workflow-dashboard.PNG",
+    technologies: ["C#", ".NET", "Entity Framework Core", "SQL Server"],
+    githubUrl: "https://github.com/mohyA81/WorkFlow",
   },
 ];
 
